@@ -1,7 +1,10 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/globals.css"
+  ],
   theme: {
     extend: {
       colors: {
@@ -20,6 +23,19 @@ const config: Config = {
       },
       boxShadow: {
         DEFAULT: "var(--shadow)"
+      },
+      variables: {
+        '--color-background': 'var(--color-background)',
+        '--color-foreground': 'var(--color-foreground)',
+        '--color-primary': 'var(--color-primary)',
+        '--color-accent': 'var(--color-accent)',
+        '--color-card': 'var(--color-card)',
+        '--color-muted': 'var(--color-muted)',
+        '--color-border': 'var(--color-border)',
+        '--color-success': 'var(--color-success)',
+        '--color-warning': 'var(--color-warning)',
+        '--radius': 'var(--radius)',
+        '--shadow': 'var(--shadow)'
       }
     }
   },

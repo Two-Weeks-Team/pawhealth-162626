@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #f5faf6; /* soft teal */
+  --color-foreground: #1e2d2b; /* deep teal */
+  --color-primary: #2f9e44; /* vibrant green */
+  --color-accent: #00aaff; /* calming blue */
+  --color-card: #ffffff;
+  --color-muted: #e2e8f0;
+  --color-border: #cbd5e1;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --radius: 0.75rem;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  background: radial-gradient(circle at top left, var(--color-background), #e0f2f1);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Simple utility classes */
+.btn-primary {
+  @apply bg-primary text-white font-medium py-2 px-4 rounded-md transition-colors hover:bg-primary/90;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

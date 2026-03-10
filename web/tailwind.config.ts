@@ -3,39 +3,27 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/globals.css"
+    "./src/app/globals.css",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--color-background)",
-        foreground: "var(--color-foreground)",
-        primary: "var(--color-primary)",
-        accent: "var(--color-accent)",
-        card: "var(--color-card)",
-        muted: "var(--color-muted)",
-        border: "var(--color-border)",
-        success: "var(--color-success)",
-        warning: "var(--color-warning)"
+        background: '#f5faf6',
+        foreground: '#1e2d2b',
+        primary: '#2f9e44',
+        accent: '#00aaff',
+        card: '#ffffff',
+        muted: '#e2e8f0',
+        border: '#cbd5e1',
+        success: '#28a745',
+        warning: '#ffc107'
       },
       borderRadius: {
-        DEFAULT: "var(--radius)"
+        DEFAULT: '0.75rem'
       },
       boxShadow: {
-        DEFAULT: "var(--shadow)"
-      },
-      variables: {
-        '--color-background': 'var(--color-background)',
-        '--color-foreground': 'var(--color-foreground)',
-        '--color-primary': 'var(--color-primary)',
-        '--color-accent': 'var(--color-accent)',
-        '--color-card': 'var(--color-card)',
-        '--color-muted': 'var(--color-muted)',
-        '--color-border': 'var(--color-border)',
-        '--color-success': 'var(--color-success)',
-        '--color-warning': 'var(--color-warning)',
-        '--radius': 'var(--radius)',
-        '--shadow': 'var(--shadow)'
+        DEFAULT: '0 4px 12px rgba(0,0,0,0.08)'
       }
     }
   },
